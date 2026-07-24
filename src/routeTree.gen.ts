@@ -9,8 +9,98 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VarthapathraRouteImport } from './routes/varthapathra'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ManagementRouteImport } from './routes/management'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as JobsRouteImport } from './routes/jobs'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ESevaRouteImport } from './routes/e-seva'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CommunityRouteImport } from './routes/community'
+import { Route as BusinessDirectoryRouteImport } from './routes/business-directory'
+import { Route as AuditStatementsRouteImport } from './routes/audit-statements'
+import { Route as ApplicationsRouteImport } from './routes/applications'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VarthapathraRoute = VarthapathraRouteImport.update({
+  id: '/varthapathra',
+  path: '/varthapathra',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManagementRoute = ManagementRouteImport.update({
+  id: '/management',
+  path: '/management',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JobsRoute = JobsRouteImport.update({
+  id: '/jobs',
+  path: '/jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ESevaRoute = ESevaRouteImport.update({
+  id: '/e-seva',
+  path: '/e-seva',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunityRoute = CommunityRouteImport.update({
+  id: '/community',
+  path: '/community',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessDirectoryRoute = BusinessDirectoryRouteImport.update({
+  id: '/business-directory',
+  path: '/business-directory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuditStatementsRoute = AuditStatementsRouteImport.update({
+  id: '/audit-statements',
+  path: '/audit-statements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApplicationsRoute = ApplicationsRouteImport.update({
+  id: '/applications',
+  path: '/applications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +109,242 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/applications': typeof ApplicationsRoute
+  '/audit-statements': typeof AuditStatementsRoute
+  '/business-directory': typeof BusinessDirectoryRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/e-seva': typeof ESevaRoute
+  '/gallery': typeof GalleryRoute
+  '/jobs': typeof JobsRoute
+  '/login': typeof LoginRoute
+  '/management': typeof ManagementRoute
+  '/profile': typeof ProfileRoute
+  '/register': typeof RegisterRoute
+  '/services': typeof ServicesRoute
+  '/varthapathra': typeof VarthapathraRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/applications': typeof ApplicationsRoute
+  '/audit-statements': typeof AuditStatementsRoute
+  '/business-directory': typeof BusinessDirectoryRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/e-seva': typeof ESevaRoute
+  '/gallery': typeof GalleryRoute
+  '/jobs': typeof JobsRoute
+  '/login': typeof LoginRoute
+  '/management': typeof ManagementRoute
+  '/profile': typeof ProfileRoute
+  '/register': typeof RegisterRoute
+  '/services': typeof ServicesRoute
+  '/varthapathra': typeof VarthapathraRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/applications': typeof ApplicationsRoute
+  '/audit-statements': typeof AuditStatementsRoute
+  '/business-directory': typeof BusinessDirectoryRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/e-seva': typeof ESevaRoute
+  '/gallery': typeof GalleryRoute
+  '/jobs': typeof JobsRoute
+  '/login': typeof LoginRoute
+  '/management': typeof ManagementRoute
+  '/profile': typeof ProfileRoute
+  '/register': typeof RegisterRoute
+  '/services': typeof ServicesRoute
+  '/varthapathra': typeof VarthapathraRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/applications'
+    | '/audit-statements'
+    | '/business-directory'
+    | '/community'
+    | '/contact'
+    | '/e-seva'
+    | '/gallery'
+    | '/jobs'
+    | '/login'
+    | '/management'
+    | '/profile'
+    | '/register'
+    | '/services'
+    | '/varthapathra'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/applications'
+    | '/audit-statements'
+    | '/business-directory'
+    | '/community'
+    | '/contact'
+    | '/e-seva'
+    | '/gallery'
+    | '/jobs'
+    | '/login'
+    | '/management'
+    | '/profile'
+    | '/register'
+    | '/services'
+    | '/varthapathra'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/applications'
+    | '/audit-statements'
+    | '/business-directory'
+    | '/community'
+    | '/contact'
+    | '/e-seva'
+    | '/gallery'
+    | '/jobs'
+    | '/login'
+    | '/management'
+    | '/profile'
+    | '/register'
+    | '/services'
+    | '/varthapathra'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ApplicationsRoute: typeof ApplicationsRoute
+  AuditStatementsRoute: typeof AuditStatementsRoute
+  BusinessDirectoryRoute: typeof BusinessDirectoryRoute
+  CommunityRoute: typeof CommunityRoute
+  ContactRoute: typeof ContactRoute
+  ESevaRoute: typeof ESevaRoute
+  GalleryRoute: typeof GalleryRoute
+  JobsRoute: typeof JobsRoute
+  LoginRoute: typeof LoginRoute
+  ManagementRoute: typeof ManagementRoute
+  ProfileRoute: typeof ProfileRoute
+  RegisterRoute: typeof RegisterRoute
+  ServicesRoute: typeof ServicesRoute
+  VarthapathraRoute: typeof VarthapathraRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/varthapathra': {
+      id: '/varthapathra'
+      path: '/varthapathra'
+      fullPath: '/varthapathra'
+      preLoaderRoute: typeof VarthapathraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/management': {
+      id: '/management'
+      path: '/management'
+      fullPath: '/management'
+      preLoaderRoute: typeof ManagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jobs': {
+      id: '/jobs'
+      path: '/jobs'
+      fullPath: '/jobs'
+      preLoaderRoute: typeof JobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/e-seva': {
+      id: '/e-seva'
+      path: '/e-seva'
+      fullPath: '/e-seva'
+      preLoaderRoute: typeof ESevaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/community': {
+      id: '/community'
+      path: '/community'
+      fullPath: '/community'
+      preLoaderRoute: typeof CommunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-directory': {
+      id: '/business-directory'
+      path: '/business-directory'
+      fullPath: '/business-directory'
+      preLoaderRoute: typeof BusinessDirectoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audit-statements': {
+      id: '/audit-statements'
+      path: '/audit-statements'
+      fullPath: '/audit-statements'
+      preLoaderRoute: typeof AuditStatementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/applications': {
+      id: '/applications'
+      path: '/applications'
+      fullPath: '/applications'
+      preLoaderRoute: typeof ApplicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +357,22 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ApplicationsRoute: ApplicationsRoute,
+  AuditStatementsRoute: AuditStatementsRoute,
+  BusinessDirectoryRoute: BusinessDirectoryRoute,
+  CommunityRoute: CommunityRoute,
+  ContactRoute: ContactRoute,
+  ESevaRoute: ESevaRoute,
+  GalleryRoute: GalleryRoute,
+  JobsRoute: JobsRoute,
+  LoginRoute: LoginRoute,
+  ManagementRoute: ManagementRoute,
+  ProfileRoute: ProfileRoute,
+  RegisterRoute: RegisterRoute,
+  ServicesRoute: ServicesRoute,
+  VarthapathraRoute: VarthapathraRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
